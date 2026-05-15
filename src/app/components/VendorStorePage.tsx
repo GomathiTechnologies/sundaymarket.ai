@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router";
 import { ArrowLeft, Search, MapPin, Clock, Plus } from "lucide-react";
+import { ProductImage, productImages } from "./ProductImage";
 
 export function VendorStorePage() {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export function VendorStorePage() {
       id: 1,
       name: "Blue Shoes Honey 500g",
       price: "$12",
-      image: "🍯",
+      image: productImages.honeyJar,
       inStock: true,
       quantity: 10,
     },
@@ -18,7 +19,7 @@ export function VendorStorePage() {
       id: 2,
       name: "Pure Maple Syrup 500ml",
       price: "$18",
-      image: "🍁",
+      image: productImages.mapleSyrup,
       inStock: true,
       quantity: 8,
     },
@@ -26,7 +27,7 @@ export function VendorStorePage() {
       id: 3,
       name: "Honey Jar Small 250g",
       price: "$8",
-      image: "🍯",
+      image: productImages.honeyJar,
       inStock: true,
       quantity: 12,
     },
@@ -34,7 +35,7 @@ export function VendorStorePage() {
       id: 4,
       name: "Maple Butter 250g",
       price: "$14",
-      image: "🧈",
+      image: productImages.mapleButter,
       inStock: true,
       quantity: 6,
     },
@@ -42,7 +43,7 @@ export function VendorStorePage() {
       id: 5,
       name: "Honeycomb Pack",
       price: "$22",
-      image: "🍯",
+      image: productImages.honeycomb,
       inStock: true,
       quantity: 5,
     },
@@ -50,7 +51,7 @@ export function VendorStorePage() {
       id: 6,
       name: "Maple Candy Bag",
       price: "$10",
-      image: "🍬",
+      image: productImages.mapleCandy,
       inStock: false,
       quantity: 0,
     },
@@ -109,8 +110,8 @@ export function VendorStorePage() {
                   : 'opacity-60'
               }`}
             >
-              <div className="w-full aspect-square bg-gray-50 rounded-xl flex items-center justify-center text-5xl mb-3">
-                {product.image}
+              <div className="w-full aspect-square bg-gray-50 rounded-xl overflow-hidden mb-3">
+                <ProductImage src={product.image} alt={product.name} />
               </div>
               <p className="text-sm text-gray-900 mb-1 line-clamp-2">
                 {product.name}

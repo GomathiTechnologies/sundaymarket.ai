@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import { ArrowLeft, Trash2, MapPin } from "lucide-react";
+import { ProductImage, productImages } from "./ProductImage";
 
 export function MultiVendorCart() {
   const navigate = useNavigate();
@@ -12,8 +13,8 @@ export function MultiVendorCart() {
         booth: "#12",
       },
       items: [
-        { id: 1, name: "Blue Shoes Honey 500g", quantity: 2, price: 12, image: "🍯" },
-        { id: 2, name: "Maple Candy Bag", quantity: 1, price: 10, image: "🍬" },
+        { id: 1, name: "Blue Shoes Honey 500g", quantity: 2, price: 12, image: productImages.honeyJar },
+        { id: 2, name: "Maple Candy Bag", quantity: 1, price: 10, image: productImages.mapleCandy },
       ],
       subtotal: 34,
     },
@@ -24,7 +25,7 @@ export function MultiVendorCart() {
         booth: "#18",
       },
       items: [
-        { id: 3, name: "Pure Maple Syrup 500ml", quantity: 1, price: 18, image: "🍁" },
+        { id: 3, name: "Pure Maple Syrup 500ml", quantity: 1, price: 18, image: productImages.mapleSyrup },
       ],
       subtotal: 18,
     },
@@ -66,8 +67,8 @@ export function MultiVendorCart() {
                 <div className="space-y-4 mb-4">
                   {vendorCart.items.map((item) => (
                     <div key={item.id} className="flex gap-4">
-                      <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
-                        {item.image}
+                      <div className="w-16 h-16 bg-gray-50 rounded-xl overflow-hidden flex-shrink-0">
+                        <ProductImage src={item.image} alt={item.name} />
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-gray-900 mb-1">{item.name}</p>

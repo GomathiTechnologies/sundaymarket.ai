@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import { ArrowLeft, Check, Edit, Trash2, AlertCircle } from "lucide-react";
+import { ProductImage, productImages } from "./ProductImage";
 
 export function CatalogReview() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export function CatalogReview() {
       quantity: 10,
       status: "approved",
       confidence: "high",
-      image: "🍯",
+      image: productImages.honeyJar,
     },
     {
       id: 2,
@@ -21,7 +22,7 @@ export function CatalogReview() {
       quantity: 8,
       status: "approved",
       confidence: "high",
-      image: "🍁",
+      image: productImages.mapleSyrup,
     },
     {
       id: 3,
@@ -30,7 +31,7 @@ export function CatalogReview() {
       quantity: 15,
       status: "needs_review",
       confidence: "medium",
-      image: "🍬",
+      image: productImages.mapleCandy,
     },
     {
       id: 4,
@@ -39,7 +40,7 @@ export function CatalogReview() {
       quantity: 12,
       status: "duplicate",
       confidence: "medium",
-      image: "🍯",
+      image: productImages.honeyJar,
     },
     {
       id: 5,
@@ -48,7 +49,7 @@ export function CatalogReview() {
       quantity: 6,
       status: "approved",
       confidence: "high",
-      image: "🧈",
+      image: productImages.mapleButter,
     },
     {
       id: 6,
@@ -57,7 +58,7 @@ export function CatalogReview() {
       quantity: 5,
       status: "approved",
       confidence: "high",
-      image: "🍯",
+      image: productImages.honeycomb,
     },
   ];
 
@@ -101,8 +102,8 @@ export function CatalogReview() {
               className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200"
             >
               <div className="flex gap-4">
-                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
-                  {product.image}
+                <div className="w-16 h-16 bg-gray-100 rounded-xl overflow-hidden flex-shrink-0">
+                  <ProductImage src={product.image} alt={product.name} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2 mb-2">

@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router";
 import { ArrowLeft, Minus, Plus, MapPin } from "lucide-react";
 import { useState } from "react";
+import { ProductImage, productImages } from "./ProductImage";
 
 export function ProductDetail() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ export function ProductDetail() {
     id: 1,
     name: "Blue Shoes Honey 500g",
     price: 12,
-    image: "🍯",
+    image: productImages.honeyJar,
     description: "Pure, raw honey harvested from local hives in the Ottawa Valley. Unfiltered and unpasteurized to preserve natural enzymes and nutrients.",
     vendor: "Blue Shoes Honey",
     booth: "#12",
@@ -37,8 +38,8 @@ export function ProductDetail() {
       </div>
 
       <div className="bg-white px-6 py-8 mb-6">
-        <div className="w-full max-w-xs mx-auto aspect-square bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl flex items-center justify-center text-9xl mb-6">
-          {product.image}
+        <div className="w-full max-w-xs mx-auto aspect-square bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl overflow-hidden mb-6">
+          <ProductImage src={product.image} alt={product.name} />
         </div>
       </div>
 

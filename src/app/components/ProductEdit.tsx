@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router";
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
+import { ProductImage, productImages } from "./ProductImage";
 
 export function ProductEdit() {
   const navigate = useNavigate();
@@ -34,8 +35,8 @@ export function ProductEdit() {
 
       <form onSubmit={handleSubmit} className="px-6 py-6">
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 mb-6">
-          <div className="w-24 h-24 bg-gray-100 rounded-2xl flex items-center justify-center text-5xl mx-auto mb-4">
-            🍬
+          <div className="w-24 h-24 bg-gray-100 rounded-2xl overflow-hidden mx-auto mb-4">
+            <ProductImage src={productImages.mapleCandy} alt="Maple Candy Bag" />
           </div>
           <button
             type="button"

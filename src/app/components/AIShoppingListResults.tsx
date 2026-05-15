@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import { ArrowLeft, X, Plus, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+import { ProductImage, productImages } from "./ProductImage";
 
 export function AIShoppingListResults() {
   const navigate = useNavigate();
@@ -17,18 +18,18 @@ export function AIShoppingListResults() {
 
   const productResults = {
     Honey: [
-      { id: 1, name: "Blue Shoes Honey 500g", vendor: "Blue Shoes Honey", price: "$12", image: "🍯" },
-      { id: 2, name: "Wildflower Honey 250g", vendor: "Blue Shoes Honey", price: "$8", image: "🍯" },
+      { id: 1, name: "Blue Shoes Honey 500g", vendor: "Blue Shoes Honey", price: "$12", image: productImages.honeyJar },
+      { id: 2, name: "Wildflower Honey 250g", vendor: "Blue Shoes Honey", price: "$8", image: productImages.honeycomb },
     ],
     Tomato: [
-      { id: 3, name: "Fresh Tomatoes 1 lb", vendor: "Green Valley Produce", price: "$3.99", image: "🍅" },
+      { id: 3, name: "Fresh Tomatoes 1 lb", vendor: "Green Valley Produce", price: "$3.99", image: productImages.tomatoes },
     ],
     Onion: [
-      { id: 4, name: "Red Onion 2 lb", vendor: "Green Valley Produce", price: "$2.99", image: "🧅" },
+      { id: 4, name: "Red Onion 2 lb", vendor: "Green Valley Produce", price: "$2.99", image: productImages.redOnions },
     ],
     Beef: [
-      { id: 5, name: "Beef Steak 1 lb", vendor: "Local Butcher", price: "$14.99", image: "🥩" },
-      { id: 6, name: "Ground Beef 1 lb", vendor: "Local Butcher", price: "$9.99", image: "🥩" },
+      { id: 5, name: "Beef Steak 1 lb", vendor: "Local Butcher", price: "$14.99", image: productImages.beefSteak },
+      { id: 6, name: "Ground Beef 1 lb", vendor: "Local Butcher", price: "$9.99", image: productImages.groundBeef },
     ],
   };
 
@@ -95,8 +96,8 @@ export function AIShoppingListResults() {
                       className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200"
                     >
                       <div className="flex gap-4">
-                        <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
-                          {product.image}
+                        <div className="w-16 h-16 bg-gray-50 rounded-xl overflow-hidden flex-shrink-0">
+                          <ProductImage src={product.image} alt={product.name} />
                         </div>
                         <div className="flex-1 min-w-0">
                           <h4 className="text-gray-900 mb-1">{product.name}</h4>

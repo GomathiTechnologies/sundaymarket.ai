@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import { Search, MapPin, Clock, ChevronRight, User, Mic } from "lucide-react";
+import { ProductImage, productImages } from "./ProductImage";
 
 export function CustomerMarketHome() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ export function CustomerMarketHome() {
       booth: "#12",
       category: "Honey & Maple",
       products: 34,
-      image: "🍯",
+      image: productImages.honeyJar,
       featured: true,
     },
     {
@@ -29,7 +30,7 @@ export function CustomerMarketHome() {
       booth: "#18",
       category: "Maple Products",
       products: 22,
-      image: "🍁",
+      image: productImages.mapleSyrup,
       featured: true,
     },
     {
@@ -38,7 +39,7 @@ export function CustomerMarketHome() {
       booth: "#5",
       category: "Vegetables",
       products: 18,
-      image: "🥬",
+      image: productImages.tomatoes,
       featured: false,
     },
     {
@@ -47,7 +48,7 @@ export function CustomerMarketHome() {
       booth: "#24",
       category: "Bakery",
       products: 15,
-      image: "🥖",
+      image: productImages.bakery,
       featured: false,
     },
   ];
@@ -124,8 +125,8 @@ export function CustomerMarketHome() {
                 className="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-200 hover:border-green-300 transition-all group"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
-                    {vendor.image}
+                  <div className="w-16 h-16 bg-green-50 rounded-xl overflow-hidden flex-shrink-0">
+                    <ProductImage src={vendor.image} alt={vendor.name} />
                   </div>
                   <div className="flex-1 text-left">
                     <div className="flex items-center gap-2 mb-1">
