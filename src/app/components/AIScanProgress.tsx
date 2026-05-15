@@ -16,9 +16,9 @@ export function AIScanProgress() {
   ];
 
   const uploadedImages = [
-    "/src/imports/image.png",
-    "/src/imports/image-1.png",
-    "/src/imports/image-2.png",
+    "/imports/image.png",
+    "/imports/image-1.png",
+    "/imports/image-2.png",
   ];
 
   useEffect(() => {

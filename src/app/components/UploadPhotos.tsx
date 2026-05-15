@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router";
 import { ArrowLeft, Camera, Upload, Video } from "lucide-react";
 import { useEffect, useState } from "react";
-import previewImage from "../../../resources/image-17.png";
 
 export function UploadPhotos() {
   const navigate = useNavigate();
@@ -34,7 +33,7 @@ export function UploadPhotos() {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden max-w-md w-full">
-          <img src={previewImage} alt="AI scan preview" className="w-full h-auto object-cover" />
+          <img src="/resources/image-17.png" alt="AI scan preview" className="w-full h-auto object-cover" />
         </div>
       </div>
     );
