@@ -1,8 +1,27 @@
 import { useNavigate } from "react-router";
 import { ArrowLeft, Camera, Upload, Video } from "lucide-react";
+import { useEffect, useState } from "react";
+import previewImage from "../../../resources/image-17.png";
 
 export function UploadPhotos() {
   const navigate = useNavigate();
+  const [showPreview, setShowPreview] = useState(false);
+
+  useEffect(() => {
+    if (!showPreview) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      navigate('/vendor/ai-scan-progress');
+    }, 2000);
+
+    return () => window.clearTimeout(timer);
+  }, [navigate, showPreview]);
+
+  const handleStartScan = () => {
+    setShowPreview(true);
+  };
 
   const photoSlots = [
     { id: 1, title: "Full Booth Photo", description: "Take a clear photo from the front of your table", icon: Camera },
@@ -10,6 +29,16 @@ export function UploadPhotos() {
     { id: 3, title: "Right Side Photo", description: "Capture products on the right side", icon: Camera },
     { id: 4, title: "Price Cards Close-up", description: "Clear shot of all price labels", icon: Camera },
   ];
+
+  if (showPreview) {
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden max-w-md w-full">
+          <img src={previewImage} alt="AI scan preview" className="w-full h-auto object-cover" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -67,7 +96,7 @@ export function UploadPhotos() {
         </div>
 
         <button
-          onClick={() => navigate('/vendor/ai-scan-progress')}
+          onClick={handleStartScan}
           className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all"
           style={{ backgroundColor: '#44C062' }}
         >

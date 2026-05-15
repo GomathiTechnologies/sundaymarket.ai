@@ -41,7 +41,6 @@ export function VendorProfile() {
               placeholder="e.g., Blue Shoes Honey"
               className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
-              required
             />
           </div>
 
@@ -51,10 +50,9 @@ export function VendorProfile() {
               type="text"
               value={formData.ownerName}
               onChange={(e) => setFormData({ ...formData, ownerName: e.target.value })}
-              placeholder="Your full name"
+              placeholder="e.g., Priya Sharma"
               className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
-              required
             />
           </div>
 
@@ -64,10 +62,9 @@ export function VendorProfile() {
               type="tel"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              placeholder="(613) 555-0123"
+              placeholder="e.g., +1 613 555 0123"
               className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
-              required
             />
           </div>
 
@@ -77,10 +74,9 @@ export function VendorProfile() {
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="your@email.com"
+              placeholder="e.g., hello@blueshoes.ai"
               className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
-              required
             />
           </div>
 
@@ -90,10 +86,9 @@ export function VendorProfile() {
               type="text"
               value={formData.boothNumber}
               onChange={(e) => setFormData({ ...formData, boothNumber: e.target.value })}
-              placeholder="e.g., #12"
+              placeholder="e.g., Booth 12"
               className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
-              required
             />
           </div>
 
