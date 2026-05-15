@@ -11,7 +11,12 @@
   ![alt text](resources/image-2.png)
   ![alt text](resources/image-3.png)
   ![alt text](resources/image-4.png)
-  ![alt text](resources/image-5.png)
+  ![alt text](resources/image-4.png)
+
+  ![alt text](src/imports/image-1.png)
+  ![alt text](src/imports/image-2.png)
+  ![alt text](src/imports/image-3.png)
+
   ![alt text](resources/image-6.png)
   ![alt text](resources/image-7.png)
   ![alt text](resources/image-8.png)
@@ -24,6 +29,8 @@
   ![alt text](resources/image-13.png)
   ![alt text](resources/image-14.png)
   ![alt text](resources/image-15.png)
+
+
 
   ## Running the code
 
