@@ -134,10 +134,10 @@ export function VendorOrders() {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-4">
+      <div className="mobile-action-bar">
         <button
           onClick={() => navigate('/')}
-          className="w-full bg-white text-gray-700 py-4 rounded-2xl shadow-sm border border-gray-200 hover:bg-gray-50 transition-colors"
+          className="mobile-secondary-action bg-white text-gray-700 hover:bg-gray-50"
         >
           Back to Home
         </button>

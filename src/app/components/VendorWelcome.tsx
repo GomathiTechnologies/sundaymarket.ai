@@ -22,7 +22,7 @@ export function VendorWelcome() {
         <div className="w-full max-w-sm space-y-4">
           <button
             onClick={() => navigate('/vendor/detect-market')}
-            className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all flex items-center justify-center gap-3"
+            className="mobile-primary-action text-white hover:opacity-90 flex items-center justify-center gap-3"
             style={{ backgroundColor: '#44C062' }}
           >
             <Store className="w-5 h-5" />

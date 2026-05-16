@@ -57,7 +57,7 @@ export function ScanResults() {
 
         <button
           onClick={() => navigate('/vendor/catalog-review')}
-          className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all flex items-center justify-center gap-2"
+          className="mobile-primary-action text-white hover:opacity-90 flex items-center justify-center gap-2"
           style={{ backgroundColor: '#44C062' }}
         >
           Review Catalog

@@ -58,19 +58,19 @@ export function EventClosed() {
         </div>
 
         <div className="space-y-3">
-          <button className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all flex items-center justify-center gap-3" style={{ backgroundColor: '#44C062' }}>
+          <button className="mobile-primary-action text-white hover:opacity-90 flex items-center justify-center gap-3" style={{ backgroundColor: '#44C062' }}>
             <Copy className="w-5 h-5" />
             Copy Catalog for Next Sunday
           </button>
 
-          <button className="w-full bg-white text-gray-700 py-4 rounded-2xl shadow-sm border border-gray-200 hover:bg-gray-50 transition-colors flex items-center justify-center gap-3">
+          <button className="mobile-secondary-action bg-white text-gray-700 hover:bg-gray-50 flex items-center justify-center gap-3">
             <Calendar className="w-5 h-5" />
             View Order History
           </button>
 
           <button
             onClick={() => navigate('/')}
-            className="w-full bg-white text-gray-700 py-4 rounded-2xl shadow-sm border border-gray-200 hover:bg-gray-50 transition-colors"
+            className="mobile-secondary-action bg-white text-gray-700 hover:bg-gray-50"
           >
             Back to Home
           </button>

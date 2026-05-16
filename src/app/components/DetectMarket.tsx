@@ -53,12 +53,12 @@ export function DetectMarket() {
         </div>
 
         <div className="space-y-3">
-          <button className="w-full bg-white text-gray-700 py-4 rounded-2xl shadow-sm border border-gray-200 hover:border-gray-300 transition-colors flex items-center justify-center gap-3">
+          <button className="mobile-secondary-action bg-white text-gray-700 hover:border-gray-300 flex items-center justify-center gap-3">
             <QrCode className="w-5 h-5" />
             Scan Market QR Code
           </button>
 
-          <button className="w-full bg-white text-gray-700 py-4 rounded-2xl shadow-sm border border-gray-200 hover:border-gray-300 transition-colors flex items-center justify-center gap-3">
+          <button className="mobile-secondary-action bg-white text-gray-700 hover:border-gray-300 flex items-center justify-center gap-3">
             <Search className="w-5 h-5" />
             Search Market Manually
           </button>

@@ -101,7 +101,7 @@ export function OrderConfirmation() {
         <div className="space-y-3">
           <button
             onClick={() => navigate('/pickup-route')}
-            className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all flex items-center justify-center gap-2"
+            className="mobile-primary-action text-white hover:opacity-90 flex items-center justify-center gap-2"
             style={{ backgroundColor: '#44C062' }}
           >
             <Navigation className="w-5 h-5" />
@@ -110,7 +110,7 @@ export function OrderConfirmation() {
 
           <button
             onClick={() => navigate('/market')}
-            className="w-full bg-white text-gray-700 py-4 rounded-2xl shadow-sm border border-gray-200 hover:bg-gray-50 transition-colors"
+            className="mobile-secondary-action bg-white text-gray-700 hover:bg-gray-50"
           >
             Back to Market
           </button>

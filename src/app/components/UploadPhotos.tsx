@@ -96,7 +96,7 @@ export function UploadPhotos() {
 
         <button
           onClick={handleStartScan}
-          className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all"
+          className="mobile-primary-action text-white hover:opacity-90"
           style={{ backgroundColor: '#44C062' }}
         >
           Start AI Scan

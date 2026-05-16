@@ -30,8 +30,8 @@ export function VendorProfile() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="px-6 py-6">
-        <div className="space-y-5">
+      <form onSubmit={handleSubmit} className="px-6 py-6 mobile-setup-form">
+        <div className="space-y-5 mobile-setup-stack">
           <div>
             <label className="block text-gray-700 mb-2">Store Name</label>
             <input
@@ -39,7 +39,7 @@ export function VendorProfile() {
               value={formData.storeName}
               onChange={(e) => setFormData({ ...formData, storeName: e.target.value })}
               placeholder="e.g., Blue Shoes Honey"
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
             />
           </div>
@@ -51,7 +51,7 @@ export function VendorProfile() {
               value={formData.ownerName}
               onChange={(e) => setFormData({ ...formData, ownerName: e.target.value })}
               placeholder="e.g., Priya Sharma"
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
             />
           </div>
@@ -63,7 +63,7 @@ export function VendorProfile() {
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               placeholder="e.g., +1 613 555 0123"
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
             />
           </div>
@@ -75,7 +75,7 @@ export function VendorProfile() {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               placeholder="e.g., hello@blueshoes.ai"
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
             />
           </div>
@@ -87,7 +87,7 @@ export function VendorProfile() {
               value={formData.boothNumber}
               onChange={(e) => setFormData({ ...formData, boothNumber: e.target.value })}
               placeholder="e.g., Booth 12"
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
             />
           </div>
@@ -99,14 +99,14 @@ export function VendorProfile() {
               onChange={(e) => setFormData({ ...formData, pickupInstructions: e.target.value })}
               placeholder="e.g., Look for the blue tent with honey jars"
               rows={3}
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control mobile-form-textarea focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
             />
           </div>
         </div>
 
         <button
           type="submit"
-          className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all mt-8"
+          className="mobile-primary-action text-white hover:opacity-90 mobile-submit-spacing mt-8"
           style={{ backgroundColor: '#44C062' }}
         >
           Save and Continue

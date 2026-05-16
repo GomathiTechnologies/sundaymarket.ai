@@ -126,10 +126,10 @@ export function AIShoppingListResults() {
 
       {/* Sticky Cart Button */}
       {cartCount > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-4">
+        <div className="mobile-action-bar">
           <button
             onClick={() => navigate('/cart')}
-            className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all flex items-center justify-center gap-2"
+            className="mobile-primary-action text-white hover:opacity-90 flex items-center justify-center gap-2"
             style={{ backgroundColor: '#44C062' }}
           >
             <ShoppingCart className="w-5 h-5" />

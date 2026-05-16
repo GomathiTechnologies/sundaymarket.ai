@@ -82,7 +82,7 @@ export function PublishStore() {
 
         <button
           onClick={() => navigate('/vendor/orders')}
-          className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all mb-3"
+          className="mobile-primary-action text-white hover:opacity-90 mb-3"
           style={{ backgroundColor: '#44C062' }}
         >
           Publish Store
@@ -90,7 +90,7 @@ export function PublishStore() {
 
         <button
           onClick={() => navigate('/vendor/catalog-review')}
-          className="w-full bg-white text-gray-700 py-4 rounded-2xl shadow-sm border border-gray-200 hover:bg-gray-50 transition-colors"
+          className="mobile-secondary-action bg-white text-gray-700 hover:bg-gray-50"
         >
           Back to Catalog
         </button>

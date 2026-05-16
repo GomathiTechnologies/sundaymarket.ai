@@ -179,3 +179,82 @@
     line-height: 1.5;
   }
 }
+
+@layer components {
+  .mobile-action-bar {
+    @apply fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-5 py-3;
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .mobile-primary-action {
+    @apply w-full rounded-xl shadow-md transition-all;
+    min-height: 48px;
+    padding-block: 0.75rem;
+  }
+
+  .mobile-secondary-action {
+    @apply w-full rounded-xl shadow-sm border border-gray-200 transition-colors;
+    min-height: 48px;
+    padding-block: 0.75rem;
+  }
+
+  @media (min-width: 430px) {
+    .mobile-action-bar {
+      @apply px-6 py-4;
+      padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+
+    .mobile-primary-action,
+    .mobile-secondary-action {
+      @apply rounded-2xl;
+      min-height: 56px;
+      padding-block: 1rem;
+    }
+  }
+
+  @media (max-width: 429px) {
+    .mobile-setup-form {
+      @apply px-5;
+      padding-block: 0.75rem !important;
+      padding-inline: 1.25rem !important;
+    }
+
+    .mobile-setup-stack {
+      gap: 0.5rem !important;
+    }
+
+    .mobile-setup-stack > :not(:last-child) {
+      margin-bottom: 0 !important;
+    }
+
+    .mobile-setup-stack > :not([hidden]) ~ :not([hidden]) {
+      margin-top: 0.5rem !important;
+    }
+
+    .mobile-setup-form label {
+      margin-bottom: 0.25rem !important;
+      font-size: 0.9375rem !important;
+      line-height: 1.35 !important;
+    }
+
+    .mobile-form-control {
+      @apply rounded-xl px-4;
+      min-height: 42px !important;
+      padding-block: 0.5rem !important;
+    }
+
+    .mobile-form-textarea {
+      min-height: 68px !important;
+    }
+
+    .mobile-submit-spacing {
+      margin-top: 0.75rem !important;
+    }
+
+    .mobile-primary-action,
+    .mobile-secondary-action {
+      min-height: 44px !important;
+      padding-block: 0.625rem !important;
+    }
+  }
+}

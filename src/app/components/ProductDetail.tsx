@@ -100,14 +100,14 @@ export function ProductDetail() {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-4">
+      <div className="mobile-action-bar">
         <div className="flex items-center justify-between mb-3">
           <span className="text-gray-600">Total</span>
           <span className="text-2xl text-gray-900">${(product.price * quantity).toFixed(2)}</span>
         </div>
         <button
           onClick={() => navigate('/cart')}
-          className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all"
+          className="mobile-primary-action text-white hover:opacity-90"
           style={{ backgroundColor: '#44C062' }}
         >
           Add to Cart

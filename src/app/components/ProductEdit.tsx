@@ -33,7 +33,7 @@ export function ProductEdit() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="px-6 py-6">
+      <form onSubmit={handleSubmit} className="px-6 py-6 mobile-setup-form">
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 mb-6">
           <div className="w-24 h-24 bg-gray-100 rounded-2xl overflow-hidden mx-auto mb-4">
             <ProductImage src={productImages.mapleCandy} alt="Maple Candy Bag" />
@@ -47,14 +47,14 @@ export function ProductEdit() {
           </button>
         </div>
 
-        <div className="space-y-5">
+        <div className="space-y-5 mobile-setup-stack">
           <div>
             <label className="block text-gray-700 mb-2">Product Name</label>
             <input
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
               required
             />
@@ -65,7 +65,7 @@ export function ProductEdit() {
             <select
               value={formData.category}
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
             >
               <option value="Honey">Honey</option>
@@ -84,7 +84,7 @@ export function ProductEdit() {
               value={formData.price}
               onChange={(e) => setFormData({ ...formData, price: e.target.value })}
               placeholder="e.g., $12"
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
               required
             />
@@ -96,7 +96,7 @@ export function ProductEdit() {
               type="number"
               value={formData.quantity}
               onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
               required
             />
@@ -108,7 +108,7 @@ export function ProductEdit() {
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               rows={4}
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control mobile-form-textarea focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
             />
           </div>
 
@@ -117,7 +117,7 @@ export function ProductEdit() {
             <select
               value={formData.status}
               onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2"
+              className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 mobile-form-control focus:outline-none focus:ring-2"
               style={{ "--tw-ring-color": "#44C062" } as React.CSSProperties}
             >
               <option value="available">Available</option>
@@ -129,7 +129,7 @@ export function ProductEdit() {
 
         <button
           type="submit"
-          className="w-full text-white py-4 rounded-2xl shadow-md hover:opacity-90 transition-all mt-8"
+          className="mobile-primary-action text-white hover:opacity-90 mobile-submit-spacing mt-8"
           style={{ backgroundColor: '#44C062' }}
         >
           Save Product
